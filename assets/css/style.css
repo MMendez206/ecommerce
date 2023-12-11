@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main main"
+        "footer footer footer";
+}
+
+/* Style Header */
+
+header {
+    background-color: #e69dfb;
+    text-align: center;
+    padding: 1em;
+    grid-area: header;
+}
+
+/* Style Nav */
+
+nav {
+    background-color: #024a86;
+    grid-area: nav;
+    text-align: center;
+    height: 100vh;
+    color: #fff;
+    padding-top: 2em;
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    height: 100vh;
+    padding-top: 2em;
+}
+
+nav>ul>li {
+    padding: 2em;
+    list-style: none;
+    color: #fff;
+}
+
+nav>ul>li:hover {
+    background-color: #109dfa;
+    transition: .20s;
+}
+
+nav>ul>li:hover>a {
+    color: #000;
+    transition: .20s;
+}
+
+nav>ul>li>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style Section */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-area: main;
+    height: 100vh;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.img>img {
+    width: 150px;
+    height: 100%;
+}
+
+.img>img:hover {
+    scale: 0.9;
+    transition: .20s;
+}
+
+.img-text {
+    padding: 1em;
+}
+
+.img-text>button {
+    height: 50px;
+    width: 200px;
+    background-color: #23bac4;
+    color: #000;
+    border: none;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #c4c3e6;
+    transition: .20s;
+}
+
+button:focus {
+    background-color: #E8EBE4;
+}
+
+/* Style Footer */
+
+footer {
+    background-color: #e69dfb;
+    text-align: center;
+    padding: 1em;
+    font-size: 20px;
+    font: bold;
+    grid-area: footer;
+}
